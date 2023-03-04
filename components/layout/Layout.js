@@ -1,6 +1,6 @@
 import MainNavigation from "./MainNavigation";
 
-function Layout(props) {
+export default function Layout(props) {
   return (
     <div>
       <MainNavigation />
@@ -8,5 +8,3 @@ function Layout(props) {
     </div>
   );
 }
-
-export default Layout;
