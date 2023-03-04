@@ -1,4 +1,4 @@
-import TodoList from "@/components/todos/TodoList.js";
+import TodoList from "@/components/todos/TodoList";
 import Head from "next/head.js";
 import { MongoClient } from "mongodb";
 

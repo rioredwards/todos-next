@@ -1,4 +1,4 @@
-import TodoForm from "@/components/todos/TodoForm.js";
+import TodoForm from "@/components/todos/TodoForm";
 import { useRouter } from "next/router.js";
 
 export default function NewTodoPage() {

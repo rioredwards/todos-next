@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import Card from "../ui/Card.js";
+import { useRef } from "react";
+import Card from "../ui/Card";
 
 export default function TodoForm(props) {
   const descriptionInputRef = useRef();

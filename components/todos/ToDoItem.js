@@ -1,5 +1,5 @@
 import { useRouter } from "next/router.js";
-import Card from "../ui/Card.js";
+import Card from "../ui/Card";
 
 export default function TodoItem(props) {
   const router = useRouter();

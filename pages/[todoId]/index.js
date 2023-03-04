@@ -1,5 +1,5 @@
 import { MongoClient, ObjectId } from "mongodb";
-import TodoDetail from "@/components/todos/TodoDetail.js";
+import TodoDetail from "@/components/todos/TodoDetail";
 import Head from "next/head.js";
 
 export default function TodoDetails(props) {
