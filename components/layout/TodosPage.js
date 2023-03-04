@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import TodoList from "../components/TodoList";
-import TodoForm from "../components/TodoForm";
+import TodoForm from "../todos/TodoForm.js";
+import TodoList from "../todos/TodoList.js";
 
 const TodoPage = () => {
   const [todos, setTodos] = useState([]);
@@ -10,7 +10,6 @@ const TodoPage = () => {
   };
 
   const deleteTodo = (id) => {
-    debugger;
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
