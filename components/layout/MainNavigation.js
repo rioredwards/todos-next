@@ -1,5 +1,4 @@
 import Link from "next/link.js";
-import classes from "./MainNavigation.module.css";
 
 function MainNavigation() {
   return (
@@ -8,10 +7,10 @@ function MainNavigation() {
       <nav>
         <ul>
           <li>
-            <Link to="/">All Todos</Link>
+            <Link href="/">All Todos</Link>
           </li>
           <li>
-            <Link to="/new-todo">Add New Todo</Link>
+            <Link href="/new-todo">Add New Todo</Link>
           </li>
         </ul>
       </nav>

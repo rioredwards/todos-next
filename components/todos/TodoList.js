@@ -1,11 +1,11 @@
 import React from "react";
-import ToDoItem from "./ToDoItem.js";
+import TodoItem from "./TodoItem.js";
 
 const TodoList = (props) => {
   return (
     <ul>
       {props.todos.map((todo) => (
-        <ToDoItem key={todo.id} id={todo.id} description={todo.description} />
+        <TodoItem key={todo.id} id={todo.id} description={todo.description} />
       ))}
     </ul>
   );
