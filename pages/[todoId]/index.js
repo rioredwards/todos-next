@@ -1,14 +1,11 @@
 import { MongoClient, ObjectId } from "mongodb";
 import TodoDetail from "@/components/todos/TodoDetail";
-import Head from "next/head.js";
+import MyHead from "@/components/head/index.js";
 
 export default function TodoDetails(props) {
   return (
     <>
-      <Head>
-        <title>{props.todoData.description}</title>
-        <meta name="description" content={props.todoData.description} />
-      </Head>
+      <MyHead title="Todo-detail" description={props.todoData.description} />
       <TodoDetail description={props.todoData.description} />
     </>
   );

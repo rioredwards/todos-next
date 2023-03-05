@@ -1,19 +1,12 @@
 import TodoList from "@/components/todos/TodoList";
-import Head from "next/head.js";
 import { MongoClient } from "mongodb";
+import MyHead from "@/components/head/index.js";
 // import classes from "@/styles/Home.module.css";
 
 export default function Home(props) {
   return (
     <>
-      <Head>
-        <title>Next Todos</title>
-        <link rel="icon" type="image/x-icon" href="todo-logo.png" />
-        <meta
-          name="description"
-          content="A simple todo app built with Next.js and MongoDB."
-        />
-      </Head>
+      <MyHead title="Home" />
       <TodoList todos={props.todos} />
     </>
   );
