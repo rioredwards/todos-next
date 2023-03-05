@@ -24,7 +24,7 @@ export async function getStaticProps() {
   const todosCollection = db.collection("todos");
 
   // get all todos from the database
-  const todos = await todosCollection.find().toArray();
+  const todos = await todosCollection.find().sort({ _id: -1 }).toArray();
 
   client.close();
 
