@@ -8,6 +8,7 @@ export default function Home(props) {
     <>
       <Head>
         <title>Next Todos</title>
+        <link rel="icon" type="image/x-icon" href="todo-logo.png" />
         <meta
           name="description"
           content="A simple todo app built with Next.js and MongoDB."
