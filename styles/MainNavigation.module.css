@@ -1,0 +1,30 @@
+.header {
+  background-color: var(--bg_color_dark_2);
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heroText {
+  color: #ffffff;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5em;
+  text-align: center;
+}

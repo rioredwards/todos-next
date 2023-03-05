@@ -1,0 +1,73 @@
+.todoList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  min-width: 28rem;
+}
+
+.todoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  min-height: 4rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg_color_light_1);
+  outline: rgba(0, 0, 0, 0.073) solid 1px;
+}
+
+.todoContainer:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.button {
+  border-radius: 0.2rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(1.2);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  min-height: 4rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg_color_light_1);
+  outline: rgba(0, 0, 0, 0.073) solid 1px;
+}
+
+.formEntry {
+  margin: 1rem 2rem;
+}
+
+.formEntry input {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: rgba(0, 0, 0, 0.151) solid 1px;
+}
+
+.formEntry input:hover {
+  background-color: rgba(0, 0, 0, 0.028);
+}
+
+.formEntry input:focus {
+  background-color: rgba(0, 0, 0, 0.028);
+  outline: rgba(0, 0, 0, 0.393) solid 1px;
+}

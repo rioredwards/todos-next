@@ -1,5 +1,5 @@
 import { useRouter } from "next/router.js";
-import Card from "../ui/Card";
+import classes from "@/styles/Todo.module.css";
 
 export default function TodoItem(props) {
   const router = useRouter();
@@ -9,12 +9,11 @@ export default function TodoItem(props) {
   }
 
   return (
-    <li>
-      <Card>
-        <h2>{props.id}</h2>
-        <p>{props.description}</p>
-        <button onClick={showDetailsHandler}>Show Details</button>
-      </Card>
+    <li className={classes.todoContainer}>
+      <h2>{props.description}</h2>
+      <button className={classes.button} onClick={showDetailsHandler}>
+        Details
+      </button>
     </li>
   );
 }

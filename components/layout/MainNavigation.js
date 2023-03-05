@@ -1,11 +1,12 @@
 import Link from "next/link.js";
+import classes from "@/styles/MainNavigation.module.css";
 
 function MainNavigation() {
   return (
-    <header>
-      <div>Todos</div>
+    <header className={classes.header}>
+      <div className={classes.heroText}>Todos</div>
       <nav>
-        <ul>
+        <ul className={classes.navLinks}>
           <li>
             <Link href="/">All Todos</Link>
           </li>
