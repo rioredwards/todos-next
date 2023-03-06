@@ -10,9 +10,11 @@ export default function TodoItem(props) {
 
   return (
     <li className={classes.todoContainer}>
-      <h2>{props.description}</h2>
-      <button className={classes.button} onClick={showDetailsHandler}>
-        Details
+      <h2 onClick={showDetailsHandler}>{props.description}</h2>
+      <button
+        className={classes.button}
+        onClick={() => props.deleteTodoHandler(props.id)}>
+        Delete
       </button>
     </li>
   );
