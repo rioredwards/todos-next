@@ -33,6 +33,7 @@ export async function getStaticProps() {
       todos: todos.map((todo) => ({
         id: todo._id.toString(),
         description: todo.description,
+        completed: todo.completed,
       })),
     },
     revalidate: 1,

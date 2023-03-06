@@ -8,7 +8,7 @@
 
 .todoContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 1rem;
   padding: 2rem;
@@ -27,6 +27,7 @@
 }
 
 .todoContainer h2 {
+  margin-right: auto;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -83,4 +84,14 @@
 .formEntry input:focus {
   background-color: rgba(0, 0, 0, 0.028);
   outline: rgba(0, 0, 0, 0.393) solid 1px;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkboxContainer input[type="checkbox"] {
+  transform: scale(1.5);
 }
