@@ -1,3 +1,4 @@
+import MyHead from "@/components/head/index.js";
 import TodoForm from "@/components/todos/TodoForm";
 import { useRouter } from "next/router.js";
 
@@ -19,5 +20,10 @@ export default function NewTodoPage() {
     router.push("/");
   }
 
-  return <TodoForm onAddTodo={addTodoHandler} />;
+  return (
+    <>
+      <MyHead title="New Todo" description="Use this page to add new todos!" />
+      <TodoForm onAddTodo={addTodoHandler} />
+    </>
+  );
 }

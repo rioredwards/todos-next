@@ -1,18 +1,12 @@
 import TodoList from "@/components/todos/TodoList";
-import Head from "next/head.js";
 import { MongoClient } from "mongodb";
+import MyHead from "@/components/head/index.js";
 // import classes from "@/styles/Home.module.css";
 
 export default function Home(props) {
   return (
     <>
-      <Head>
-        <title>Next Todos</title>
-        <meta
-          name="description"
-          content="A simple todo app built with Next.js and MongoDB."
-        />
-      </Head>
+      <MyHead title="Home" />
       <TodoList todos={props.todos} />
     </>
   );
@@ -30,7 +24,7 @@ export async function getStaticProps() {
   const todosCollection = db.collection("todos");
 
   // get all todos from the database
-  const todos = await todosCollection.find().toArray();
+  const todos = await todosCollection.find().sort({ _id: -1 }).toArray();
 
   client.close();
 
@@ -39,6 +33,7 @@ export async function getStaticProps() {
       todos: todos.map((todo) => ({
         id: todo._id.toString(),
         description: todo.description,
+        completed: todo.completed,
       })),
     },
     revalidate: 1,
