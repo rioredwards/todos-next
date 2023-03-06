@@ -1,7 +1,10 @@
 import TodoItem from "./TodoItem";
 import classes from "@/styles/Todo.module.css";
+import { useRouter } from "next/router.js";
 
 export default function TodoList(props) {
+  const router = useRouter();
+
   async function deleteTodoHandler(id) {
     console.log("deleting todo: " + id);
     const response = await fetch("/api/delete-todo", {
@@ -14,6 +17,7 @@ export default function TodoList(props) {
 
     const data = await response.json();
     console.log(data);
+    router.push("/");
   }
 
   return (
