@@ -5,7 +5,7 @@ import { MongoClient, ObjectId } from "mongodb";
 
 export default async function handler(req, res) {
   console.log("req.method", req.method);
-  if (req.method === "PUT") {
+  if (req.method === "PATCH") {
     // get the todoId from the request body
     const todoId = req.body.id;
     const updatedTodo = req.body.updatedTodo;

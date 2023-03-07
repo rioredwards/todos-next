@@ -24,7 +24,7 @@ export default function TodoList({ todos }) {
     console.log("toggling todo: ", id);
     console.log("updatedTodo: ", updatedTodo);
     const response = await fetch("/api/update-todo", {
-      method: "PUT",
+      method: "PATCH",
       body: JSON.stringify({ id, updatedTodo }),
       headers: {
         "Content-Type": "application/json",
