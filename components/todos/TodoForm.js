@@ -11,6 +11,7 @@ export default function TodoForm(props) {
 
     const todoData = {
       description: enteredDescription,
+      completed: false,
     };
 
     props.onAddTodo(todoData);
