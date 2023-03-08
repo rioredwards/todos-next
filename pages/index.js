@@ -1,9 +1,19 @@
 import TodoList from "@/components/todos/TodoList";
 import { MongoClient } from "mongodb";
 import MyHead from "@/components/head/index.js";
+import { useEffect } from "react";
 // import classes from "@/styles/Home.module.css";
+import { getProviders } from "next-auth/react";
 
 export default function Home(props) {
+  useEffect(() => {
+    async function returnProviders() {
+      const providers = await getProviders();
+      console.log("Providers", providers);
+    }
+    returnProviders();
+  }, []);
+
   return (
     <>
       <MyHead title="Home" />

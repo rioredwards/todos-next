@@ -7,7 +7,7 @@ export default function NewTodoPage() {
 
   async function addTodoHandler(enteredTodoData) {
     console.log("addTodoHandler");
-    const response = await fetch("/api/new-todo", {
+    const response = await fetch("/api/todo/new-todo", {
       method: "POST",
       body: JSON.stringify(enteredTodoData),
       headers: {

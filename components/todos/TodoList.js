@@ -7,7 +7,7 @@ export default function TodoList({ todos }) {
 
   async function deleteTodoHandler(id) {
     console.log("deleting todo: " + id);
-    const response = await fetch("/api/delete-todo", {
+    const response = await fetch("/api/todo/delete-todo", {
       method: "DELETE",
       body: JSON.stringify(id),
       headers: {
@@ -23,7 +23,7 @@ export default function TodoList({ todos }) {
   async function updateTodoHandler(id, updatedTodo) {
     console.log("toggling todo: ", id);
     console.log("updatedTodo: ", updatedTodo);
-    const response = await fetch("/api/update-todo", {
+    const response = await fetch("/api/todo/update-todo", {
       method: "PATCH",
       body: JSON.stringify({ id, updatedTodo }),
       headers: {
